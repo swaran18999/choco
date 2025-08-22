@@ -281,7 +281,7 @@ that uses these options.");
                                 package.IsApproved ? " [Approved]" : string.Empty,
                                 package.IsDownloadCacheAvailable ? " Downloads cached for licensed users" : string.Empty,
                                 package.PackageTestResultStatus == "Failing" && package.IsDownloadCacheAvailable ? " - Possibly broken for FOSS users (due to original download location changes by vendor)" : package.PackageTestResultStatus == "Failing" ? " - Possibly broken" : string.Empty,
-                                config.ListCommand.ShowLastUpdatedDate ? package.Published?.ToString() ?? "Last updated not available" : string.Empty
+                                config.ListCommand.ShowLastUpdatedDate ? package.Published?.ToString("yyyy-MM-dd HH:mm:ss") ?? "Last updated not available" : string.Empty
                                 ))
                             );
 
